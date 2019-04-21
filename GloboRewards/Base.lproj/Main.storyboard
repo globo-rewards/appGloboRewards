@@ -73,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globoplay" translatesAutoresizingMaskIntoConstraints="NO" id="4Ch-kJ-Ggl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download (1)" translatesAutoresizingMaskIntoConstraints="NO" id="4Ch-kJ-Ggl">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </imageView>
                         </subviews>
@@ -737,8 +737,8 @@
     <resources>
         <image name="Agrupar 2 copy" width="40" height="40"/>
         <image name="albums" width="30" height="30"/>
+        <image name="download (1)" width="745" height="1198"/>
         <image name="fiat" width="1200" height="1200"/>
-        <image name="globoplay" width="746" height="1126"/>
         <image name="home" width="30" height="30"/>
         <image name="radio_waves" width="30" height="30"/>
         <image name="us_dollar" width="30" height="30"/>
