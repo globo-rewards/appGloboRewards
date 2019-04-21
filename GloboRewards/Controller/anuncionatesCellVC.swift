@@ -11,6 +11,7 @@ import UIKit
 class anuncionatesCellVC: UITableViewCell {
 
     @IBOutlet var imagesIW: UIImageView!
+    @IBOutlet var anuncianteLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

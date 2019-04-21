@@ -15,7 +15,6 @@ class AnunciantesVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     
     @IBOutlet var anunciantesTbl: UITableView!
-    @IBOutlet var playerView: UIView!
     @IBOutlet var processandoView: UIView!
     @IBOutlet var activeAIV: UIActivityIndicatorView!
     
@@ -89,22 +88,25 @@ class AnunciantesVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     override func viewDidAppear(_ animated: Bool) {
         if parou == true {
+//            playerView.isHidden = true
             let anunciante = anunciantes[indexInt]
-            
+
             let alert = UIAlertController.init(title: "Verificação", message: "Qual video foi exibido?", preferredStyle: .alert)
             let BOSCH = UIAlertAction.init(title: "Globo", style: .default)
             let casasBahia = UIAlertAction.init(title: "Casas Bahia", style: .default)
             let okAction = UIAlertAction.init(title: "\(anunciante.marca)", style: .default) { _ in
-                let controller = self.storyboard?.instantiateViewController(withIdentifier: "AtividadeVC") as! AtividadeVC
+                let controller = self.storyboard?.instantiateViewController(withIdentifier: "atividade") as! AtividadeVC
                 controller.idProgramaAnunciante = anunciante.idProgramaAnunciante
                 controller.anunciante = anunciante.marca
                 self.present(controller, animated: true, completion: nil)
-                self.performSegue(withIdentifier: "tarefas", sender: anunciante)
+                self.performSegue(withIdentifier: "atividade", sender: anunciante)
             }
             alert.addAction(BOSCH)
             alert.addAction(casasBahia)
             alert.addAction(okAction)
+            parou = false
             self.present(alert, animated: true, completion: nil)
+        
         }
     }
     @IBAction func voltarPressed(_ sender: UIButton) {
@@ -120,11 +122,12 @@ class AnunciantesVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? anuncionatesCellVC {
             //            let image = UIImage(named: "\(post)")
             DispatchQueue.global().async {
-                let url = URL(fileURLWithPath: post.imagem)
-                if let data = try? Data( contentsOf: url)
+                let url = URL(string: post.imagem)
+                if let data = try? Data( contentsOf: url!)
                 {
                     DispatchQueue.main.async {
                         cell.imagesIW.image = UIImage( data:data)
+                        cell.anuncianteLbl.text = post.marca
                     }
                 }
             }
@@ -138,17 +141,27 @@ class AnunciantesVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let anunciante = anunciantes[indexPath.row]
         
-        //       let videoURL = URL(string: anunciante.link)
-        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        
+        let videoURL = URL(string: anunciante.link)
+//        let videoURL = URL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
+//        let videoURL = URL(string: "https://www.youtube.com/watch?v=3vIA3F8N1kI?playsinline=1")
+
         let player = AVPlayer(url: videoURL!)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
-        
-        
+
+
         self.present(playerViewController, animated: true) {
             playerViewController.player!.play()
         }
+        
+//        playerView.isHidden = true
+//        playerView.delegate = self
+//        playerView.load(withVideoId: "LBolKaA4DQ8", playerVars: ["playsinline": 1])
+//        // Do any additional setup after loading the view.
+//        playerView.playVideo()
+        
+//        self.performSegue(withIdentifier: "youtube", sender: anunciante)
+        
         indexInt = indexPath.row
         parou = true
         

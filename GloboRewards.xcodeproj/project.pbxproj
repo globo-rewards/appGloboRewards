@@ -10,6 +10,8 @@
 		745FE5B6E1621D4E30306EB3 /* Pods_GloboRewards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64BC73949F3BE2E3ED9800CE /* Pods_GloboRewards.framework */; };
 		BC25D65E226C590E004338DF /* Globo-Rd-Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC25D65D226C4D0E004338DF /* Globo-Rd-Bd.ttf */; };
 		BC4DB35E226C0AEC009CA6E5 /* TarefasCellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4DB35D226C0AEC009CA6E5 /* TarefasCellVC.swift */; };
+		BC4EFEC0226CADBD004DF8B8 /* youtubeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EFEBF226CADBD004DF8B8 /* youtubeController.swift */; };
+		BC4EFEC3226CBD15004DF8B8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4EFEC2226CBD15004DF8B8 /* RoundedButton.swift */; };
 		BC760750226BCFB800DA855E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC76074F226BCFB800DA855E /* AppDelegate.swift */; };
 		BC760752226BCFB800DA855E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC760751226BCFB800DA855E /* ViewController.swift */; };
 		BC760755226BCFB800DA855E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC760753226BCFB800DA855E /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		A7CC65389BFF54AE28D79098 /* Pods-GloboRewards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GloboRewards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GloboRewards/Pods-GloboRewards.debug.xcconfig"; sourceTree = "<group>"; };
 		BC25D65D226C4D0E004338DF /* Globo-Rd-Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Globo-Rd-Bd.ttf"; sourceTree = "<group>"; };
 		BC4DB35D226C0AEC009CA6E5 /* TarefasCellVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefasCellVC.swift; sourceTree = "<group>"; };
+		BC4EFEBF226CADBD004DF8B8 /* youtubeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youtubeController.swift; sourceTree = "<group>"; };
+		BC4EFEC2226CBD15004DF8B8 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		BC76074C226BCFB800DA855E /* GloboRewards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GloboRewards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC76074F226BCFB800DA855E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC760751226BCFB800DA855E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +85,14 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		BC4EFEC1226CBD04004DF8B8 /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				BC4EFEC2226CBD15004DF8B8 /* RoundedButton.swift */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
 		BC760743226BCFB800DA855E = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 		BC76074E226BCFB800DA855E /* GloboRewards */ = {
 			isa = PBXGroup;
 			children = (
+				BC4EFEC1226CBD04004DF8B8 /* custom */,
 				BC25D65A226C4C36004338DF /* fonts */,
 				BCBE3A1C226C184C00DBFC43 /* Datasource */,
 				BC760761226BE3D400DA855E /* Controller */,
@@ -123,6 +136,7 @@
 				BC760766226BE44F00DA855E /* AtividadeVC.swift */,
 				BC760768226BEE9200DA855E /* anuncionatesCellVC.swift */,
 				BC4DB35D226C0AEC009CA6E5 /* TarefasCellVC.swift */,
+				BC4EFEBF226CADBD004DF8B8 /* youtubeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,8 +268,10 @@
 				BC760769226BEE9200DA855E /* anuncionatesCellVC.swift in Sources */,
 				BC760765226BE43D00DA855E /* AnunciantesVC.swift in Sources */,
 				BC760767226BE44F00DA855E /* AtividadeVC.swift in Sources */,
+				BC4EFEC0226CADBD004DF8B8 /* youtubeController.swift in Sources */,
 				BC4DB35E226C0AEC009CA6E5 /* TarefasCellVC.swift in Sources */,
 				BCF380F2226C2D3D00A2046F /* Anunciante.swift in Sources */,
+				BC4EFEC3226CBD15004DF8B8 /* RoundedButton.swift in Sources */,
 				BC760752226BCFB800DA855E /* ViewController.swift in Sources */,
 				BC760763226BE42100DA855E /* CapturaVC.swift in Sources */,
 				BCBE3A1E226C186D00DBFC43 /* Tarefas.swift in Sources */,

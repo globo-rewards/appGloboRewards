@@ -24,8 +24,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GloboPlay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qg-X0-EcO">
-                                <rect key="frame" x="73.5" y="410" width="267.5" height="76"/>
-                                <fontDescription key="fontDescription" name="GlobotipoRounded-Bold" family="Globotipo Rounded" pointSize="54"/>
+                                <rect key="frame" x="56" y="405.5" width="302.5" height="85.5"/>
+                                <fontDescription key="fontDescription" name="GlobotipoRounded-Bold" family="Globotipo Rounded" pointSize="61"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
